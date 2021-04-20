@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,CAAC,CAAC;EACA,UAAU,EAAE,UAAU;CACvB;;AAED,AAAA,IAAI,CAAC;EACH,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "styles.scss",
+        "modules/_variables.scss",
+        "modules/_generic.scss",
+        "modules/_header.scss",
+        "modules/_main.scss",
+        "modules/_sponsors.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}

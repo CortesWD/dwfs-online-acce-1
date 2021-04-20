@@ -1,0 +1,82 @@
+$cyan: #6beeff;
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2{
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 10vmin;
+}
+
+.box {
+  width: 100vmin;
+  height: 20vmin;
+  font-size: 18px;
+  background: $cyan;
+}
+
+.box-max {
+  width: 100vmax;
+  height: 20vmax;
+  background: $cyan;
+}
+
+.box-vh {
+  background-color: $cyan;
+  height: 10vh;
+  width: 10vh;
+}
+
+.box-vw {
+  background-color: $cyan;
+  height: 10vw;
+  width: 10vw;
+}
+
+.box-media {
+  background-color: $cyan;
+  height: 50px;
+
+  &::after {
+    content: "caja de 0 a 768px de w";
+  }
+
+  @media (min-width: 768px)  {
+    background-color: red;
+
+    &::after {
+      content: "caja de 768px en adelante";
+    }
+  }
+}
+
+/*REM & EM*/
+
+html {
+  font-size: 16px;
+}
+
+.parrafo {
+  font-size: 25px;
+  margin: 20px auto;
+  padding: 4px 8px;
+
+  .span-rem {
+    font-size: 3rem;  // 1rem = 16px; 3rem = 48px
+  }
+
+  .span-em {
+    font-size: 2em; // 1em = 25px
+  }
+
+  @media  (max-width: 700px) {
+    font-size: 40px;
+  }
+}

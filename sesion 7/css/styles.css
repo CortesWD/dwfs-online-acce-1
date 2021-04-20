@@ -1,0 +1,105 @@
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  to {
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  to {
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #ccc;
+}
+
+.container {
+  border: 2px solid #fff;
+  margin: auto;
+  position: relative;
+  height: 800px;
+  width: 800px;
+}
+
+.container .img {
+  display: block;
+  position: absolute;
+  height: 800px;
+  width: 800px;
+}
+
+.container .puntocentro {
+  background-color: #000;
+  border-radius: 80%;
+  display: block;
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  top: 55%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  z-index: 1;
+}
+
+.container .minutero {
+  width: 200px;
+  height: 30px;
+  background-color: black;
+  left: 50%;
+  top: 53%;
+  -webkit-animation: rotation 3600s steps(60) infinite;
+          animation: rotation 3600s steps(60) infinite;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.container .hora {
+  width: 130px;
+  height: 30px;
+  background-color: green;
+  left: 50%;
+  top: 53%;
+  -webkit-animation: rotation 216000s steps(60) infinite;
+          animation: rotation 216000s steps(60) infinite;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.container .segundero {
+  width: 250px;
+  height: 20px;
+  background-color: #f00;
+  left: 50%;
+  top: 54%;
+  -webkit-animation: rotation 60s steps(60) infinite;
+          animation: rotation 60s steps(60) infinite;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+/*# sourceMappingURL=styles.css.map */

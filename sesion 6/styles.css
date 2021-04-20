@@ -1,0 +1,222 @@
+/*Generic styles*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main {
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  padding: 20px 100px;
+}
+
+h1 {
+  margin: 30px 0;
+}
+
+h2 {
+  margin: 60px 0 10px 0;
+}
+
+.box {
+  background: #7decec;
+  display: inline-block;
+  height: 100px;
+  margin: 20px 20px 20px 0;
+  padding-top: 20px;
+  text-align: center;
+  width: 100px;
+}
+
+.gradients .box-ctn div:first-child {
+  background-image: linear-gradient(to right, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+}
+
+
+.gradients .box-ctn .linear-grad {
+  background: linear-gradient(to right, #c9de96 0%,#8ab66b 44%,#398235 100%);
+}
+
+.gradients .box-ctn div:last-child {
+  background-image: radial-gradient(ellipse at center, rgba(254,204,177,1) 0%,rgba(241,116,50,0.05) 21%,rgba(241,115,49,0) 22%,rgba(234,85,7,1) 55%,rgba(234,85,7,0) 76%,rgba(234,85,7,0.42) 84%,rgba(246,129,67,1) 95%,rgba(251,149,94,1) 100%);
+}
+
+.pseudo-elementos .text {
+ width: 600px;
+}
+
+.pseudo-elementos .text::before {
+  color: purple;
+  content: '"';
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.pseudo-elementos .text::after {
+  color: green;
+  content: '"';
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.pseudo-elementos .el-to-hover:hover {
+  background-color: blue;
+  border: 2px solid black;
+  color: red;
+  cursor: pointer;
+}
+
+.form-control:focus {
+  background-color: gray;
+  color: red;
+}
+
+.z-index h3 {
+  padding: 50px 0 20px 0;
+}
+
+.z-index .second-box {
+  background-color: red;
+  transform: translate(-80px, 40px);
+}
+
+.z-index .third-box {
+  position: relative;
+  z-index: 1;
+}
+.z-index .fourth-box {
+  background-color: red;
+  transform: translate(-80px, 60px);
+  z-index: 300;
+}
+
+.z-index .six-box {
+  background-color: red;
+  transform: translate(-80px, 40px);
+  position: relative;
+  z-index: -1;
+}
+
+
+.transform .translate-x {
+  transform: translateX(50px);
+}
+.transform .translate-y {
+  transform: translateY(50px);
+}
+.transform .translate {
+  transform: translate(50px, 50px);
+}
+.transform .translate2 {
+  transform: translate(-50px, -50px);
+}
+
+.transform .scale {
+  transform: scale(2,2);
+}
+
+.transform .scale2 {
+  transform: scale(0.5,0.5);
+}
+
+.transform .rotate {
+  transform: rotate(45deg);
+}
+
+.transform .skew {
+  transform: skew(20deg, 0);
+}
+
+
+.transform .skew2 {
+  transform: skew(0, 20deg);
+}
+
+.transform .skew3 {
+  transform: skew(20deg, 20deg);
+}
+
+
+.animation-velocity .anim-ease {
+  transition: all 1s ease;
+}
+.animation-velocity .anim-linear {
+  transition: all 1s linear;
+}
+.animation-velocity .anim-ease-in {
+  transition: all 1s ease-in;
+}
+.animation-velocity .anim-ease-out {
+  transition: all 1s ease-out;
+}
+.animation-velocity .anim-ease-in-out {
+  transition: all 1s ease-in-out;
+}
+
+
+
+/*animation*/
+.animation-transition h3 {
+  padding: 50px 0;
+}
+
+.animation-transition .box {
+  transition: all ease-in-out 300ms;
+}
+
+.animation-transition .translate:hover {
+  transform: translate(50px, 50px);
+}
+
+
+.animation-transition .scale:hover {
+  background-color: red;
+  transform: scale(0.5,0.5);
+}
+
+@keyframes colorcitos {
+  0% {background: #7decec;}
+  25% {background: #bee7e7; width: 150px;}
+  50% {background: #fff; width: 200px;}
+  75% {background: #bee7e7; width: 150px;}
+  100% {background: #7decec; width: 100px;}
+}
+
+.colors {
+  /* animation: colorcitos 3s ease infinite; */
+  animation-name: colorcitos;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movement {
+  0% {transform: translateX(0px);}
+  50% {transform: translateX(500px);}
+  100% {transform: translateX(0px);}
+}
+
+.animation-keyframes .movement{
+  /*lo mismo que se puso en la caja anterior pero abreviado a una linea*/
+  animation: movement 3s ease infinite;
+  animation-timing-function: cubic-bezier(.09,1.03,.43,-0.18);
+}
+
+.animation-keyframes .movement-color{
+  /*dos animaciones al mismo tiempo separandolas con coma*/
+  animation-name: colorcitos, movement;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(.43,1.27,.75,.15);
+  animation-iteration-count: infinite;
+}
+
+.roboto {
+  font-family: 'Roboto', arial, sans-serif;
+}
+
+.r-bold { 
+  font-weight: 700;
+}
+
+.tegomin {
+  font-family: 'New Tegomin', serif;
+}

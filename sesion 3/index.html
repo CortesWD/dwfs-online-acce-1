@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+<body>
+  <form action="" id="registro">
+    <div>
+      <label for="nombrecito">Nombre: </label>
+      <input tabindex="1" type="text" placeholder="nombre apellido" id="nombrecito" name="nombrecito" />
+    </div>
+    <div>
+      <label for="correo">Email: </label>
+      <input tabindex="3" type="email" placeholder="cosme@fulanito.com" id="correo" name="correo" required />
+    </div>
+    <div>
+      <label for="web">Tu sitio web</label>
+      <input tabindex="2" type="url" required placeholder="www.misitio.com" id="web" name="web" />
+    </div>
+    <div>
+      <label for="celular">tu numero celular</label>
+      <input tabindex="1" type="number" placeholder="3## ### ## ##" id="celular" name="celular" />
+    </div>
+    <div>
+      <label for="cv">Tu hoja de vida</label>
+      <input type="file" name="cv" id="cv" />
+    </div>
+    <div>
+      <label for="pass">tu contraseña</label>
+      <input type="password" id="pass" name="pass">
+    </div>
+    <div>
+      <span for="exp">Tienes experiencia programando?</span>
+      <input type="radio" name="exp" id="expY" value="yes" />
+      <label for="expY">Sí</label>
+
+      <input type="radio" name="exp" id="expN" value="no" />
+      <label for="expN">No</label>
+    </div>
+    <div>
+      <label for="terms">Acepto terminos y condiciones</label>
+      <input type="checkbox" value="true" required id="terms">
+    </div>
+    <div>
+      <label for="pais">de donde eres</label>
+      <select name="pais" id="pais">
+        <option>Seleccionar opcion</option>
+        <option value="AR">Argentina</option>
+        <option value="CO">Colombia</option>
+        <option value="PE">Perú</option>
+      </select>
+    </div>
+    <div>
+      <label for="comentario">Dejanos un comentario</label>
+      <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+      <button type="reset">Borrar datos</button>
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+  hola
+</body>
+</html>

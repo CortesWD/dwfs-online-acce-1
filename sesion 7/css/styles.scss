@@ -1,0 +1,67 @@
+@import './modules/_variables';
+@import './modules/_mixins';
+@import './modules/_keyframe';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color_gray;
+}
+
+.container {
+  border: 2px solid $color_white;
+  margin: auto;
+  position: relative;
+  @include  cuadrado;
+
+  .img {
+    display: block;
+    position: absolute;
+    @include  cuadrado;
+  }
+
+  .puntocentro {
+    background-color: $color_black;
+    border-radius: 80%;
+    display: block;
+    height: 50px;
+    left: 50%;
+    position: absolute;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    z-index: 1;
+  }
+
+  .minutero{
+    width: 200px;
+    height: 30px;
+    background-color: black;
+    left: 50%;
+    top: 53%;
+
+    @include mixinClock(3600s, 60);
+  }
+
+  .hora{
+    width: 130px;
+    height: 30px;
+    background-color:$color_green;
+    left: 50%;
+    top: 53%;
+
+    @include mixinClock(216000s, 60);
+  }
+
+  .segundero{
+    width: 250px;
+    height: 20px;
+    background-color: $color_red;
+    left: 50%;
+    top: 54%;
+
+    @include mixinClock(60s, 60);
+  }
+}

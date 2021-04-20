@@ -1,0 +1,18 @@
+@import './_variables';
+
+%cuadrado {
+  height: $clock_width;
+  width: $clock_width;
+}
+
+@mixin cuadrado($value: $clock_width ) {
+  height: $value;
+  width: $value;
+}
+
+@mixin mixinClock($secs, $steps) {
+  animation: rotation $secs steps($steps) infinite;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transform-origin: left;
+}
