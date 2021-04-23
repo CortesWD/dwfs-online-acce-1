@@ -48,7 +48,7 @@ h3 {
   content: "caja de 0 a 768px de w";
 }
 
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   .box-media {
     background-color: red;
   }

@@ -1,0 +1,338 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  margin: 50px;
+}
+
+h2 {
+  border-top: 2px solid #00a3a3;
+}
+
+p {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.box {
+  background: #4a72ca;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  margin: 5px;
+  text-align: center;
+  width: 50px;
+}
+
+/*flex-direction*/
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*flex-direction*/
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.row_reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.column_reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+/*flex-wrap*/
+.wrap {
+  border: 1px solid #000;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nowrap {
+  border: 1px solid #000;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.wrap_reverse {
+  border: 1px solid #000;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+/*flex-flow*/
+.wrap_row {
+  border: 1px solid #000;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+/*justify-content*/
+.jc {
+  width: 500px;
+  border: 1px solid #000;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.jc-col {
+  width: 500px;
+  height: 400px;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.jc-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.jc-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.jc-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jc-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jc-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/*align-items*/
+.ai {
+  width: 500px;
+  height: 300px;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.ai-col {
+  width: 500px;
+  height: 300px;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.ai-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.ai-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.ai-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*lineas de stretch*/
+.box-bas-1 {
+  color: #000;
+  line-height: 120px;
+}
+
+.box-bas-2 {
+  font-size: 38px;
+}
+
+.box-bas-3 {
+  font-size: 2px;
+}
+
+.box-bas-4 {
+  color: #000;
+  line-height: 90px;
+  font-size: 56px;
+}
+
+.ai-baseline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.ai-stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.ai-stretch div {
+  height: unset;
+}
+
+.ai-col-stretch div {
+  width: unset;
+}
+
+/*align-content*/
+.ac {
+  border: 1px solid #000;
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.ac-col {
+  border: 1px solid #000;
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.ac-start {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.ac-end {
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.ac-center {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.ac-around {
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.ac-between {
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.ac-stretch {
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+.ac-stretch div {
+  height: unset;
+}
+
+.ac-stretch-col div {
+  width: unset;
+}
+/*# sourceMappingURL=styles.css.map */
