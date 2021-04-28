@@ -1,0 +1,134 @@
+@import './utils';
+
+*{
+  box-sizing: border-box;
+}
+
+main{
+  margin: 50px auto;
+}
+
+h2 {
+  border-top: 2px solid $green;
+}
+
+.box{
+  background: $blue;
+  color: $white;
+  height: 50px;
+  line-height: 50px;
+  margin: 5px;
+  text-align: center;
+  width: 50px;
+}
+
+.parent {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/*order*/
+.order_child {
+  order: 1;
+}
+.order_child_neg {
+  order: -1;
+}
+
+/*flex-grow*/
+.grow_parent {
+  .box {
+    min-width: 10%;
+    width: unset;
+  }
+}
+.grow_child {
+  flex-grow: 2;
+}
+.grow_child2 {
+  flex-grow: 0.5;
+}
+
+/*flex-shrink*/
+.shrink {
+  flex-flow: row nowrap;
+
+  .box {
+    width: 40%;
+  }
+}
+
+.shrink_child {
+  flex-shrink: 0;
+}
+.shrink_child2 {
+  flex-shrink: 2;
+}
+
+/*flex-basis*/
+.basis_child {
+  flex-basis: 300px;
+}
+.basis_child2 {
+  flex-basis: 10%;
+}
+
+/*align-self*/
+.as_auto {
+  @include defineBoxAlignItems;
+
+  .child {
+    align-self: auto;
+  }
+}
+
+.as_start {
+  @include defineBoxAlignItems(flex-end);
+
+  .child {
+    align-self: flex-start;
+  }
+}
+
+.as_end {
+  @include defineBoxAlignItems;
+
+  .child {
+    align-self: flex-end;
+  }
+}
+
+.as_center {
+  @include defineBoxAlignItems;
+
+  .child {
+    align-self: center;
+  }
+}
+
+.as_baseline {
+  @include defineBoxAlignItems(center);
+
+  .child {
+    align-self: baseline;
+  }
+}
+
+.child1 {
+  line-height: 20px;
+}
+.child3 {
+  line-height: 5px;
+}
+.child4 {
+  font-size: 25px;
+}
+
+.as_stretch {
+  @include defineBoxAlignItems;
+  
+  .child {
+    height: auto;
+    align-self: stretch;
+  }
+}
